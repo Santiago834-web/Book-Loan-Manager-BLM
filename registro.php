@@ -21,7 +21,7 @@ if (!$connection) {
 }
 
 // Seleccionar la base de datos
-$datab = "if0_43457205_blm_database";
+$datab = "blformu";
 $db = mysqli_select_db($connection, $datab);
 
 if (!$db) {
