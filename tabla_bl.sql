@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: sql101.infinityfree.com
--- Tiempo de generación: 16-11-2026 a las 17:03:00
+-- Tiempo de generación: 16-11-2026 a las 17:16:53
 -- Versión del servidor: 11.4.13-MariaDB
 -- Versión de PHP: 7.2.22
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `if0_43457205_blm_database`
+-- Base de datos: `if0_43457205_blformu`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `tabla_bl` (
   `facilidad` text NOT NULL,
   `comentario` text NOT NULL,
   `correo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
