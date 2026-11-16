@@ -1060,6 +1060,14 @@ mostrarResenasAprobadas();
 
 </script>
 
+<script>
+document.getElementById("formularioSatisfaccion").addEventListener("submit", function(event) {
+    console.log("Formulario enviado mediante:", event.submitter ? event.submitter.type : "submit");
+    console.log("Método configurado:", this.method);
+    console.log("Destino:", this.action);
+});
+</script>
+
 </body>
 </html>
 </body>
