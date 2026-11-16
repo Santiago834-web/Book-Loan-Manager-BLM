@@ -511,7 +511,9 @@
                 Cuéntanos cómo fue tu experiencia utilizando nuestra página.
             </p>
 
-            <form action="registro.php" name="" method="POST" >
+            <form
+                action="https://bookloanmanager.infinityfree.io/registro.php"
+                method="POST">
 
                 <!-- Calificación general -->
                 <div class="campo-satisfaccion">
@@ -748,18 +750,6 @@
         JAVASCRIPT
         ========================= -->
     <script>
-
-    document.getElementById("formularioSatisfaccion").addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        const mensaje = document.getElementById("mensajeSatisfaccion");
-
-        mensaje.textContent = "¡Gracias por compartir tu opinión! Tu respuesta ha sido registrada.";
-
-        this.reset();
-
-    });
 
     </script>
 
