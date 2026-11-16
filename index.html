@@ -7,7 +7,7 @@
     <title>Biblioteca Digital Dinamarca</title>
 
     <!-- LOGO DE LA PESTAÑA (FAVICON) -->
-    <link rel="icon" href="Imagenes//ODF.png" type="image/png">
+    <link rel="icon" href="Imagenes/ODF.png" type="image/png">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -511,16 +511,82 @@
                 Cuéntanos cómo fue tu experiencia utilizando nuestra página.
             </p>
 
-            <form action="https://bookloanmanager.infinityfree.io/registro.php" method="POST">
+            <form action="registro.php" name="" method="POST" >
 
-    <input type="hidden" name="satisfaccion" value="5">
-    <input type="hidden" name="facilidad" value="Fácil">
-    <input type="hidden" name="comentario" value="Prueba de conexión">
-    <input type="hidden" name="correo" value="">
+                <!-- Calificación general -->
+                <div class="campo-satisfaccion">
+                    <label>¿Qué tan satisfecho estás con la Biblioteca Digital?</label>
 
-    <button type="submit">Probar envío POST</button>
+                    <div class="estrellas">
+                        <input type="radio" id="estrella5" name="satisfaccion" value="5" required>
+                        <label for="estrella5">★</label>
 
-</form>
+                        <input type="radio" id="estrella4" name="satisfaccion" value="4">
+                        <label for="estrella4">★</label>
+
+                        <input type="radio" id="estrella3" name="satisfaccion" value="3">
+                        <label for="estrella3">★</label>
+
+                        <input type="radio" id="estrella2" name="satisfaccion" value="2">
+                        <label for="estrella2">★</label>
+
+                        <input type="radio" id="estrella1" name="satisfaccion" value="1">
+                        <label for="estrella1">★</label>
+                    </div>
+                </div>
+
+                <!-- Facilidad de uso -->
+                <div class="campo-satisfaccion">
+                    <label for="facilidad">
+                        ¿Qué tan fácil fue encontrar el libro o recurso que buscabas?
+                    </label>
+
+                    <select id="facilidad" name="facilidad" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Muy fácil">Muy fácil</option>
+                        <option value="Fácil">Fácil</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Difícil">Difícil</option>
+                        <option value="Muy difícil">Muy difícil</option>
+                    </select>
+                </div>
+
+                <!-- Comentario -->
+                <div class="campo-satisfaccion">
+                    <label for="comentario">
+                        ¿Tienes alguna sugerencia o comentario?
+                    </label>
+
+                    <textarea
+                        id="comentario"
+                        name="comentario"
+                        rows="5"
+                        placeholder="Escribe aquí tu opinión..."
+                    ></textarea>
+                </div>
+
+                <!-- Correo opcional -->
+                <div class="campo-satisfaccion">
+                    <label for="correoSatisfaccion">
+                        Correo electrónico <span>(opcional)</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                    >
+                </div>
+
+                <button type="submit" class="boton-satisfaccion">
+                    Enviar opinión
+                </button>
+
+                <!-- Mensaje de confirmación -->
+                <p id="mensajeSatisfaccion" class="mensaje-satisfaccion"></p>
+
+            </form>
         </div>
     </section>
 
@@ -682,6 +748,18 @@
         JAVASCRIPT
         ========================= -->
     <script>
+
+    document.getElementById("formularioSatisfaccion").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const mensaje = document.getElementById("mensajeSatisfaccion");
+
+        mensaje.textContent = "¡Gracias por compartir tu opinión! Tu respuesta ha sido registrada.";
+
+        this.reset();
+
+    });
 
     </script>
 
@@ -989,14 +1067,6 @@ function mostrarResenasAprobadas() {
 
 mostrarResenasAprobadas();
 
-</script>
-
-<script>
-document.getElementById("formularioSatisfaccion").addEventListener("submit", function(event) {
-    console.log("Formulario enviado mediante:", event.submitter ? event.submitter.type : "submit");
-    console.log("Método configurado:", this.method);
-    console.log("Destino:", this.action);
-});
 </script>
 
 </body>
