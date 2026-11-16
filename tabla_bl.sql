@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: sql101.infinityfree.com
--- Tiempo de generación: 16-11-2026 a las 16:00:53
+-- Tiempo de generación: 16-11-2026 a las 17:03:00
 -- Versión del servidor: 11.4.13-MariaDB
 -- Versión de PHP: 7.2.22
 
