@@ -647,12 +647,17 @@ mostrarResenas();
             </div>
 
             <div class="campo-libro">
-                <label for="imagenLibro">URL de la portada</label>
+                <label for="imagenLibro">Portada del libro</label>
                 <input
-                    type="text"
+                    type="file"
                     id="imagenLibro"
-                    placeholder="Ej: imagen-7.jpg"
+                    accept="image/png, image/jpeg, image/webp"
                 >
+                <small class="ayuda-imagen">Selecciona una imagen JPG, PNG o WEBP desde tu computador.</small>
+                <div id="vistaPreviaPortada" class="vista-previa-portada" hidden>
+                    <img id="imagenPrevia" alt="Vista previa de la portada">
+                    <span>Vista previa de la portada</span>
+                </div>
             </div>
 
             <div class="campo-libro">
